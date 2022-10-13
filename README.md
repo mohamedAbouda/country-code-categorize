@@ -18,7 +18,7 @@
 	php artisan serve
 
 #### Commands included
-A command to migrate the phone number valid state to a new column in the database to make the search and filteration easier 
+A command to migrate the phone number valid state to a new column in the database to make the search and filtration easier 
 ##### parmaters
 
  - no parameters need for this command
@@ -26,6 +26,5 @@ A command to migrate the phone number valid state to a new column in the databas
 ##### example :
 
     php artisan customers:update-valid-status
-
- 
-    
+#### Attachment 
+- SQL file including the customers table
