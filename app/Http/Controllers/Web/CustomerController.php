@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\API;
+namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
 use App\Repositories\CustomerRepository;
@@ -18,6 +18,9 @@ class CustomerController extends Controller
 
     public function index(Request $request)
     {
-        return $this->customerSerivce->list($request);
+        $customers = $this->customerSerivce->list($request);
+        return view('customers')->with([
+            'customers' => $customers
+        ]);
     }
 }

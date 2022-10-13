@@ -12,9 +12,9 @@ class CustomerService {
         $this->customerRepository = $customerRepository;
     }
 
-    public function list()
+    public function list($request)
     {
-        return $this->customerRepository->list();
+        return $this->customerRepository->list($request);
     }
 
 }

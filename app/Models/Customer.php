@@ -18,7 +18,13 @@ class Customer extends Model
         '+256' => 'Uganda',
     ];
 
-    protected $appends = ['code', 'country', 'state', 'phone_number'];
+    protected $fillable = [
+        'name', 'phone', 'is_valid'
+    ];
+
+    public $timestamps = false;
+
+    protected $appends = ['code', 'country', 'phone_number'];
 
     public function getCodeAttribute()
     {
